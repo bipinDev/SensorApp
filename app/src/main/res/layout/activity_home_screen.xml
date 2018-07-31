@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreen">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="List of Available Sensors"
+    android:gravity="center"
+    android:visibility="gone"
+    android:textSize="20sp"
+    />
+
+    <GridView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="289dp"
+        android:numColumns="auto_fit"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="stop"
+        android:text="STOP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.829" />
+
+   <Button
+       android:id="@+id/button3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="8dp"
+       android:layout_marginEnd="8dp"
+       android:layout_marginLeft="8dp"
+       android:layout_marginRight="8dp"
+       android:layout_marginStart="8dp"
+       android:layout_marginTop="8dp"
+       android:text="FORWARD"
+       android:onClick="forward"
+       app:layout_constraintBottom_toTopOf="@+id/button"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/list" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="left"
+        android:text="Left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="right"
+        android:text="Right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/button" />
+
+   <Button
+       android:id="@+id/button4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="8dp"
+       android:layout_marginEnd="8dp"
+       android:layout_marginLeft="8dp"
+       android:layout_marginRight="8dp"
+       android:layout_marginStart="8dp"
+       android:layout_marginTop="8dp"
+       android:text="Backward"
+       android:onClick="backward"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/button"
+       app:layout_constraintVertical_bias="0.666" />
+
+    <ToggleButton
+        android:id="@+id/FGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:textOn="F-GPS On"
+        android:textOff="F-GPS Off"
+        android:layout_marginTop="8dp"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list"
+        app:layout_constraintVertical_bias="0.549" />
+
+    <ToggleButton
+        android:id="@+id/NMODE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="ToggleButton"
+        android:textOff="N-Mode Off"
+        android:textOn="N-Mode On"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/list"
+        app:layout_constraintVertical_bias="0.396" />
+</android.support.constraint.ConstraintLayout>
